@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/Week2/first website/styles.css" rel="stylesheet" />
+    <title>Component</title>
+  </head>
+  <body>
+    <h1>Sahil's component library</h1>
+    <p>
+      I am attending neog.camp and I want to make a library which would make all
+      my projects look good and consistent.
+    </p>
+    <hr />
+    <h2>@typography</h2>
+    <h1>This is the biggest heading</h1>
+    <h2>This is the second biggest</h2>
+    <p>
+      Let me show you the normal text. This is free flowing and will wrap at the
+      end like paragraph
+    </p>
+    <small>This is relatively smaller text</small>
+    <hr />
+    <h2>@container</h2>
+    <h3>@fluid container</h3>
+    <div class="container fluid_container">
+      This is fluid container and will go till the end of the page.
+    </div>
+    <h3>@centered container</h3>
+    <div class="container centered_container">
+      This is centered container and will go till specified width.
+    </div>
+    <hr />
+    <h2>@links</h2>
+    <a class="links links-primary" href="/">Primary Link</a>
+    <a class="links links-secondary" href="/">Secondary Link</a>
+    <hr />
+    <h2>@list</h2>
+    <h3>unordered list</h3>
+    <ul class="list">
+      <li>Item One</li>
+      <li>Item Two</li>
+      <li>Item Three</li>
+    </ul>
+    <h3>unordered inline list</h3>
+    <ul class="list">
+      <li class="list-inline-item">Inline Item One</li>
+      <li class="list-inline-item">Inline Item Two</li>
+      <li class="list-inline-item">Inline Item Three</li>
+    </ul>
+    <h3>reversed ordered list</h3>
+    <ol reversed>
+      <li>milk</li>
+      <li>eggs</li>
+      <li>break</li>
+    </ol>
+    <hr />
+    <h2>@nav</h2>
+    <nav class="container navigation">
+      <span class="navigation-brand">Brand</span>
+      <ul class="list">
+        <li class="list-inline-item">
+          <a class="links links-active" href="/">home</a>
+        </li>
+        <li class="list-inline-item">
+          <a class="links" href="/">products</a>
+        </li>
+        <li class="list-inline-item">
+          <a class="links" href="/">about</a>
+        </li>
+      </ul>
+    </nav>
+    <hr />
+    <h2>@header</h2>
+    <header class="hero">
+      <img class="hero-img" src="images/hero.svg" />
+      <h1 class="hero-text">heading inside hero</h1>
+    </header>
+    <hr />
+    <h2>@section</h2>
+    <section class="section">
+      <div class="container centered_container">
+        <h1>white section</h1>
+        <p>This will have white background</p>
+      </div>
+    </section>
+    <section class="section offwhite">
+      <div class="container centered_container">
+        <h1>off white section</h1>
+        <p>This will have gray background</p>
+      </div>
+    </section>
+    <hr />
+    <h2>@footer</h2>
+    <footer class="footer">
+      <div>Some small heading inside footer</div>
+      <ul class="list">
+        <li class="list-inline-item">
+          <a class="links" href="/">socialone</a>
+        </li>
+        <li class="list-inline-item">
+          <a class="links" href="/">socialTwo</a>
+        </li>
+        <li class="list-inline-item">
+          <a class="links" href="/">socialThree</a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
