@@ -81,7 +81,7 @@ hr {
 
 .navigation {
   max-width: 1200px;
-  background-color: var(--accent-color);
+  /* background-color: var(--accent-color); */
   color: var(--darkslategray);
   padding: 1rem;
   border-radius: 0.5rem;
@@ -255,6 +255,10 @@ hr {
   align-items: flex-start;
 }
 
+.container-blog p {
+  margin-bottom: 1.5rem;
+}
+
 .img-blog {
   height: 350px;
   padding: 0.5rem;
@@ -267,9 +271,14 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+
   padding: 2rem;
   border-radius: 1.5rem;
+}
+
+.blog-article a {
+  text-decoration: none;
+  color: var(--darkslate);
 }
 
 .project-list {
@@ -307,4 +316,10 @@ hr {
 .invert {
   --accent-color: darkslategray;
   --darkslate: beige;
+}
+
+.blog-article,
+.footer-invert,
+.footer-invert .fab {
+  color: var(--darkslate);
 }

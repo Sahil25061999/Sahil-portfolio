@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/brands.min.css"
+      integrity="sha512-lCU0XyQA8yobR7ychVxEOU5rcxs0+aYh/9gNDLaybsgW9hdrtqczjfKVNIS5doY0Y5627/+3UVuoGv7p8QsUFw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <title>Sahil Padvi | Async vs defer</title>
+  </head>
+  <body>
+    <nav class="container navigation">
+      <!-- <div class="container logo-container"> -->
+      <!-- <img class="logo" src="/Week2/first website/images/logo.svg" /> -->
+      <span class="navigation-brand">Sahil Padvi</span>
+      <!-- </div> -->
+
+      <ul class="list">
+        <li class="list-inline-item">
+          <a class="links" href="index.html">Home</a>
+        </li>
+        <li class="list-inline-item">
+          <a class="links" href="projects.html">Projects</a>
+        </li>
+        <li class="list-inline-item">
+          <a class="links links-active" href="blog.html">Blogs</a>
+        </li>
+      </ul>
+    </nav>
+    <section class="section section-blog">
+      <div class="container centered_container container-blog">
+        <div class="blog-article">
+          <h1>Async vs defer</h1>
+          <img
+            class="img-blog"
+            src="http://www.growingwiththeweb.com/images/2014/02/26/async-vs-defer-twitter.png"
+          />
+          <p>
+            So before knowing anything we must know how a browser parses a html
+            document.
+          </p>
+
+          <p>
+            The browser parses any html document from top to bottom.But whenever
+            it encounters a img,link tag it sends out a request for that
+            resources and continues parsing .The important thing to note is that
+            the browser <strong>does not stop parsing</strong>the html document
+            to get the img source .
+          </p>
+          <p>
+            However whenever the browser encouters the script tag it stops
+            parsing the html file and downloads the javascript and executes it.
+          </p>
+          <p>
+            These it the reason why the script tag is place at the bottom of the
+            html file, so that there is no delay parsing the html file.
+          </p>
+          <h2 style="margin-bottom: 0.5rem">async</h2>
+          <span style="background-color: black"
+            >Syntax: &ltscript async src="script.js" &gt &lt/script&gt
+          </span>
+          <p style="margin-top: 0.5rem">
+            The async attribute when applied to the script tag will make the
+            script tag behave like a img tag, that is when the browser
+            encounters a script it will not stop parsing just like when it
+            encounters a img tag and sends a request to download the javascript.
+          </p>
+          <p>
+            However, when the javascript file is downloaded and the browser is
+            not completed parsing it will stop parsing and execute the
+            javascript file and then continue parsing the html file.
+          </p>
+          <h2 style="margin-bottom: 0.5rem">defer</h2>
+          <span style="background-color: black"
+            >Syntax: &ltscript defer src="script.js" &gt &lt/script&gt
+          </span>
+          <p style="margin-top: 0.5rem">
+            When defer is applied the browser will download the javascript file
+            in the background, but unlike async it wont stop parsing when the
+            javascript resource are downloaded, rather it will complete the
+            parsing of the html document and then execute the javascript file.
+          </p>
+          <p>
+            Also the javascriptfile would be executed in order they are defined.
+          </p>
+
+          <p style="margin-top: 1.5rem">Thanks for reading the blog.</p>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div>Connect with me</div>
+      <ul class="list social-list">
+        <li class="list-inline-item">
+          <a
+            target="_blank"
+            class="links"
+            href="https://github.com/Sahil25061999"
+            ><span class="fab fa-github"></span
+          ></a>
+        </li>
+        <li class="list-inline-item">
+          <a target="_blank" class="links" href="https://twitter.com/SahilPadvi"
+            ><span class="fab fa-twitter"></span
+          ></a>
+        </li>
+        <li class="list-inline-item">
+          <a
+            target="_blank"
+            class="links"
+            href="https://www.linkedin.com/in/sahil-padvi-996828190/"
+            ><span class="fab fa-linkedin-in"></span
+          ></a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
